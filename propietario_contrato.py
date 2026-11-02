@@ -18,12 +18,11 @@ def registrar_propietario():
 
 def registrar_contrato(propietario):
     inmueble = input("Codigo del inmueble: ")
-
     tasacion = float(input("Valor de tasacion sin puntos: "))
 
-    while tasacion <= 0:
+    if tasacion <= 0:
         print("El valor debe ser mayor que cero.")
-        tasacion = float(input("Ingrese nuevamente la tasacion: "))
+        return None
 
     monto = tasacion * 0.5 / 100
 
@@ -41,3 +40,10 @@ def registrar_contrato(propietario):
     print("Monto del 0,5%:", monto)
 
     return contrato
+
+
+# Ejecutar el archivo directamente
+
+if __name__ == "__main__":
+    propietario = registrar_propietario()
+    contrato = registrar_contrato(propietario)
