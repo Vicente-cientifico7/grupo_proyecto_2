@@ -1,3 +1,9 @@
+# Propietario y contrato
+#
+# Solicita los datos del propietario y del inmueble.
+# Calcula el 0,5 % del valor de tasacion.
+# Muestra los resultados en pantalla.
+# 
 # Registro del propietario
 
 def registrar_propietario():
